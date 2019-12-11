@@ -55,8 +55,8 @@ allprojects {
         maven {
             url "s3://paciolan.mobilesdk/releases"
             credentials(AwsCredentials) {
-                accessKey project.accessKey // this is going to come from the integrator's step
-                secretKey project.secret // this is going to come from the integrator's step
+                accessKey ""
+                secretKey ""
             }
         }
     }
