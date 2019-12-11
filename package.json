@@ -1,0 +1,49 @@
+{
+  "name": "paciolan-sdk-capacitor-plugin",
+  "version": "2.0.1",
+  "description": "A capacitor plugin for the Paciolan ticketing SDK.",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "author": "Paciolan Mobile Team <pacmobile@paciolan.com>",
+  "license": "No License",
+  "dependencies": {
+    "@capacitor/core": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.4",
+    "@capacitor/ios": "latest",
+    "@capacitor/android": "latest"
+  },
+  "files": [
+    "dist/",
+    "ios/",
+    "android/",
+    "PaciolanSdkCapacitorPlugin.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlabdev.paciolan.info/development/application/integration/mobile/msdk-capacitor-plugin"
+  },
+  "bugs": {
+    "url": "https://gitlabdev.paciolan.info/development/application/integration/mobile/msdk-capacitor-plugin/issues"
+  }
+}
