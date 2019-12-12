@@ -4,9 +4,9 @@
     s.version = '2.0.1'
     s.summary = 'A capacitor plugin for the Paciolan ticketing SDK.'
     s.license = { type: 'No License' }
-    s.homepage = 'https://gitlabdev.paciolan.info/development/application/integration/mobile/msdk-capacitor-plugin'
+    s.homepage = 'https://github.com/Paciolan/mSDK-capacitor-plugin'
     s.author = { 'Paciolan Mobile Team' => 'pacmobile@paciolan.com' }
-    s.source = { :git => 'https://gitlabdev.paciolan.info/development/application/integration/mobile/msdk-capacitor-plugin', :tag => s.version.to_s }
+    s.source = { :git => 'https://github.com/Paciolan/mSDK-capacitor-plugin', :tag => s.version.to_s }
     s.source_files = 'ios/Plugin/**/*.{swift,h,m,c,cc,mm,cpp}'
     s.ios.deployment_target  = '11.0'
     s.dependency 'Capacitor'
