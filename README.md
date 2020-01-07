@@ -27,16 +27,6 @@ In `Pods -> Targets -> React -> Build Phases -> Link Binary With Libraries` add:
 - `glog.framework`
 - `DoubleConversion.framework`
 
-In `Pods -> Targets -> react-native-flurry-sdk -> Build Phases -> Link Binary With Libraries -> + -> Add Other...` add:
-
-- `Pods/Flurry-iOS-SDK/Flurry/libFlurry_9.3.1.a`
-- `Pods/Flurry-iOS-SDK/FlurryConfig/libFlurryConfig_9.3.1.a`
-- `Pods/Flurry-iOS-SDK/FlurryMessaging/libFlurryMessaging_9.3.1.a`
-
-Manually copy `{.m|.h}` files recursively from `ios/AppName/Pods/Flurry-iOS-SDK` to `ios/AppName/Pods/react-native-flurry-sdk/ios/ReactNativeFlurry` (8 files)
-
-Comment Out RCT_EXPORT_METHOD `logPayment` in `AppName/ios/App/Pods/react-native-flurry-sdk/ios/ReactNativeFlurry/ReactNativeFlurry.m` (Should be lines 296 - 306)
-
 In `AppName -> Targets -> AppName -> Build Phases -> Copy Bundle Resources -> + -> Add Other...` add:
 
 - `Pods/PaciolanSDK/Pod/Assets/PaciolanSDK.js` - `Copy items if needed` - `Finish`
