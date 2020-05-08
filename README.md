@@ -1,22 +1,24 @@
-# Capacitor integration for MobileSDK
+# mSDK Capacitor Plugin
+This capacitor plugin exposes PaciolanSDK's native components via a JavaScript interface.
 
+## Installation
 ```
 npm install https://github.com/Paciolan/mSDK-capacitor-plugin --save
 ```
 
 ## iOS
 
-Add the following to your project's iOS podfile:
+Update your iOS project's podfile with the following:
 
 ```
-source 'https://github.com/Paciolan/mSDK-specs'
+source 'https://github.com/Paciolan/mSDK-specs.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 # Include the PaciolanSdkCapacitorPlugin in your pods
 pod 'PaciolanSdkCapacitorPlugin', :path => '../../node_modules/paciolan-sdk-capacitor-plugin'
 ```
 
-If Podfile includes use_frameworks! add this post install script or append the contents to your post install script:
+If your iOS project's podfile uses `use_frameworks!`, append the following post install script to your podfile:
 
 ```
 post_install do |installer|
@@ -30,7 +32,7 @@ post_install do |installer|
 end
 ```
 
-Run `pod install repo-update` in the ios/App directory of your project.
+Run `pod install --repo-update` in the `ios` directory of your project.
 
 Run the following in the root directory of the project:
 
@@ -65,19 +67,19 @@ In your `build.gradle` file within the root of your `android` folder, add:
 
 ```
 maven {
-            url "http://s3.us-west-2.amazonaws.com/paciolan.mobilesdk/releases"
+    url "http://s3.us-west-2.amazonaws.com/paciolan.mobilesdk/releases"
 }
 ```
 
-The above url should work. But if for some reason, an alternate url is needed - url "http://paciolan.mobilesdk.s3.amazonaws.com/releases" can be used as well.
+The above url should work. But if for some reason it does not work, an alternate url you can try is `http://paciolan.mobilesdk.s3.amazonaws.com/releases`.
 
 In your `app/build.gradle` file, add (`under dependencies`):
 
 ```
-implementation 'com.paciolan:mobilesdk:{specific version}'
+implementation 'com.paciolan:mobilesdk:{version}'
 ```
 
-Register PaciolanSdk's class in your Acitivity so Capacitor is aware of it:
+Register PaciolanSDK's class in your Acitivity so Ionic Capacitor is aware of it:
 
 ```
 // Other imports...
