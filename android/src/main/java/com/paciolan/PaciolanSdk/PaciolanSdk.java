@@ -15,7 +15,12 @@ public class PaciolanSdk extends Plugin {
     public void show(PluginCall call) {
         String config = call.getString("config");
 
-        MobileSDK.getInstance().startReactApp(getActivity(), config);
+        getBridge().getActivity().runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                MobileSDK.getInstance().startReactApp(getActivity(), config);
+            }
+        });        
 
         JSObject ret = new JSObject();
         ret.put("config", config);
