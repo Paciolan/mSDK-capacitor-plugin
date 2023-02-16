@@ -20,7 +20,7 @@ public class PaciolanSdk extends Plugin {
             public void run() {
                 MobileSDK.getInstance().startReactApp(getActivity(), config);
             }
-        });
+        });        
 
         JSObject ret = new JSObject();
         ret.put("config", config);
